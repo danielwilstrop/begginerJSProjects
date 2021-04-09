@@ -1,0 +1,11 @@
+{
+  "name": "to-do-list",
+  "version": "1.0.0",
+  "description": "Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Daniel Wilstrop",
+  "license": "ISC"
+}

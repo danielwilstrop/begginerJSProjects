@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "test": "mocha test/**/*.js"
+  },
+  "name": "image-gallery",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script-test.js",
+  "directories": {
+    "test": "script-test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^8.2.1"
+  }
+}

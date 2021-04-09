@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANy68nB2bUDj5oo5KizNzv9xG_uD6AZTA&libraries=places&callback=initMap">
+    </script>
+    <link rel="stylesheet" href="css/style.css"type = "text/css">
+    <script src = "js/main.js" type = "module" defer ></script>
+    <title>Weather Forecast</title>
+</head>
+<body>
+
+    <!-- Heading and About -->
+    <section class = "welcome">
+        <h1 class = "heading"> Wilstrops Weather</h1> 
+        <h3 class = "about"> Please enter a location <span class = "hidden">(to the nearest major city or town) <br> <span class = "secondline">for an accurate and up to date weather forecast</span></span></h3>
+        <div class = "searchbar">
+            <input type = "text" name = "input" id = "input" placeholder= "Enter a Place...">
+        </div>
+    </section>   
+
+    <!-- forecast section -->
+    <section class = "forecast">
+        <div class= "weather">
+            <p> Weather </p>
+            <p> <img src = "./resources/icons/unknown.png" class = "image" id = "weather" > </p>
+        </div>
+        <div class= "temperature">
+            <p> Temp. (&#8451) </p>
+            <p id = "temperature"> 0 </p>
+        </div>
+        <div class= "wind-speed" >
+            <p> Wind Speed </p>
+            <p id = "wind-speed"> 0 </p>
+        </div>
+        <button><img src="./resources/more.png" class ="down" id = "more"></button>
+    </section>
+
+
+    
+    <!-- hidden section for extra information -->
+
+    <section class = "extraForecast" id = "extraForecast">
+        <div class="nextday" id = "next-day"></div>
+        <div class="nextday2" id = "third-day"></div>
+        <div class="nextday3" id = "fourth-day"></div>
+        <div class="next-day-weather" > <img src = "./resources/icons/unknown.png" class = "image" id = "next-day-weather"> </div>
+        <div class="next-day-weather2"> <img src = "./resources/icons/unknown.png" class = "image" id = "next-day-weather2"></div>
+        <div class="next-day-weather3"> <img src = "./resources/icons/unknown.png" class = "image" id = "next-day-weather3"></div>
+        <div class="next-day-temp" id = "next-day-temp"> 0 </div>
+        <div class="next-day-temp2" id = "next-day-temp2"> 0 </div>
+        <div class="next-day-temp3" id = "next-day-temp3"> 0 </div>
+        <div class="next-day-wind" id = "next-day-wind"> 0 </div>
+        <div class="next-day-wind2" id = "next-day-wind2"> 0 </div>
+        <div class="next-day-wind3" id = "next-day-wind3"> 0 </div>
+        <div class="weather1"> Weather </div>
+        <div class="temperature1"> Temperature (&#8451) </div>
+        <div class="wind">Wind Speed</div>
+    </div>
+
+        <button><img src="./resources/up.png" class = "up" id = "less"></button>
+    </section>
+    
+    <!-- footer -->
+    <footer id = "footer">
+        <p> &copy Daniel Wilstrop, 2020 </p>
+        <ul class = "contact">
+            <li> Email: d.wilstrop@hotmail.com</li>
+            <li> Phone: 01234 567890</li>
+        </ul>
+    </footer>
+</body>
+</html>

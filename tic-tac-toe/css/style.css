@@ -1,0 +1,214 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+:root {
+  --cell-size: 100px;
+  --mark-size: calc(var(--cell-size) * .9)
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: #bdc3c7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+h1 {
+    font-size: 3.75rem;
+    text-align: center;
+    margin-bottom: -10rem;
+    padding-top: 2rem;
+    text-decoration: underline;
+}
+
+.board {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(3, auto);
+    margin-top: -13rem;
+    margin-bottom: -12.5rem;
+}
+
+.cell.x::before,
+.cell.x::after,
+.cell.circle::before {
+  background-color: black;
+}
+
+.board.x .cell:not(.x):not(.circle):hover:before,
+.board.x .cell:not(.x):not(.circle):hover::after,
+.board.circle .cell:not(.x):not(.circle):hover:before {
+    background-color: lightgrey;
+}
+
+.cell {
+    width: var(--cell-size);
+    height: var(--cell-size);
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.cell.circle,
+.cell.x {
+    cursor: not-allowed;
+}
+
+.cell:first-child,
+.cell:nth-child(2),
+.cell:nth-child(3) {
+    border-top: 0;
+}
+
+.cell:nth-child(3),
+.cell:nth-child(6),
+.cell:nth-child(9) {
+    border-right: 0;
+}
+
+.cell:nth-child(7),
+.cell:nth-child(8),
+.cell:nth-child(9) {
+    border-bottom: 0;
+}
+
+.cell:first-child,
+.cell:nth-child(4),
+.cell:nth-child(7) {
+    border-left: 0;
+}
+
+.cell.x::before,
+.cell.x::after,
+.board.x .cell:not(.x):not(.circle):hover:before,
+.board.x .cell:not(.x):not(.circle):hover::after{
+    content: '';
+    width:  calc(var(--mark-size) * .15);
+    height: var(--mark-size);
+    position: absolute;
+}
+
+.cell.x::before,
+.board.x .cell:not(.x):not(.circle):hover:before {
+    transform: rotate(45deg);
+}
+
+.cell.x::after,
+.board.x .cell:not(.x):not(.circle):hover::after {
+    transform: rotate(-45deg);
+}
+
+.cell.circle::before,
+.cell.circle::after,
+.board.circle .cell:not(.x):not(.circle):hover::after,
+.board.circle .cell:not(.x):not(.circle):hover::before {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+}
+
+.cell.circle::before,
+.board.circle .cell:not(.x):not(.circle):hover::before {
+    width: var(--mark-size);
+    height: var(--mark-size);
+}
+
+.cell.circle::after,
+.board.circle .cell:not(.x):not(.circle):hover::after {
+    width: calc(var(--mark-size) * .7);
+    height: calc(var(--mark-size) * .7);
+    background-color:white;
+}
+
+.winning-message {
+    position: fixed;
+    display: none;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    opacity: 0.9;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 5rem;
+    flex-direction: column;
+}
+
+.winning-message button {
+    font-size: 3rem;
+    background-color: white;
+    border-radius: 5px;
+    padding: .3em .5em;
+    cursor: pointer;
+    border: 1px solid black;
+    margin-top: 2rem;
+}
+
+.winning-message button:hover {
+    border-color: white;
+    background-color:black;
+    color: white;
+}
+
+.winning-message.show {
+    display: flex;
+}
+
+.scores {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scorebox {
+    width: 4rem;
+    height:2rem;
+    border: solid 1px black;
+    margin:1rem;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding-top: 0.4rem;
+}
+
+.oscore, .xscore {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.oscore {
+    margin-left: 3rem;
+}
+
+.xscore {
+    margin-right: 3rem;
+}
+
+h2 {
+  margin-bottom: -0.5rem;
+}
+
+.scores button {
+    border-radius: 10px;
+    color: black;
+    background-color: white;
+    height: 2rem;
+}
+
+.scores button:hover {
+    color: white;
+    background-color: black;
+}

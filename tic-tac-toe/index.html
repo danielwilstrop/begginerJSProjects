@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href = "css/style.css" rel = "stylesheet" type = "text/css">
+    <script src = "js/script.js" type ="text/javascript" defer ></script>
+    <title>Tic-Tac-Toe</title>
+</head>
+<body>
+    <h1> Tic-Tac-Toe!</h1>
+    <div class = "board" id="board">
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+    </div>
+    <div class = "scores">
+        <div class = "xscore">
+            <h2>Player X </h2>
+            <div class="scorebox" data-x-score></div>
+            <button id = "boardclear">Clear Board</button>
+        </div>
+        <div class = "oscore">
+            <h2> Player O </h2>
+            <div class="scorebox" data-o-score></div>
+            <button id = "resetGame">Reset Game</button>
+        </div>
+    </div>
+    <div class="winning-message" id = "winningMessage">
+        <div data-winning-message-text></div>
+        <button id = "restartButton">Restart</button>
+    </div>
+</body>
+</html>

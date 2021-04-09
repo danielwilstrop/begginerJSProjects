@@ -1,0 +1,36 @@
+{
+  "name": "weatherapp",
+  "version": "1.0.0",
+  "description": "weatherapp",
+  "main": "js/main.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "devStart": "nodemon server.js",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "danielwilstrop.github.io"
+  },
+  "keywords": [
+    "weather"
+  ],
+  "author": "daniel wilstrop",
+  "license": "ISC",
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.6",
+    "prettier": "2.2.1"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.17.1"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": "true"
+  }
+}

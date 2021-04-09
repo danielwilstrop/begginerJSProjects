@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href = "style.css" rel ="stylesheet" type = "text/css">
+    <script src="script.js" type ="text/javascript" defer ></script>
+      <title>Tip Calculator</title>
+</head>
+<body class = "body">
+    <div class = "form-container">
+        <h1 class = "heading">Tip Calculator</h1>
+        <form class = "form" method="GET" action="">
+            <label for = "bill-amount">How much is the Bill?</label><br>
+            <input type = "number" placeholder="£0.00" name = "bill-amount" id="bill-amount" span = "0.01"><br>
+            <label for = "service">How was the Service?</label><br>
+            <select name = "serivce" id = "service">
+                <option  value = "1">Poor - 5%</option>
+                <option  value = "2">Good - 10%</option>
+                <option  value = "3">Excellent - 20%</option><br>
+            </select><br>
+            <label for = "people" name = "people">How many People are spliting the Tip?</label><br>
+            <input type = "number" name = "people" id = "people"><br>
+            <input type = "submit" name = "submit" class = "submit" id = "submit">
+        </form>
+        <div class = "output" id = "output"> 
+            <p> Bill: <span id = "bill-amount-output">£0</span></p>
+            <p> Tip Amount: <span id = "tip-amount">£0</span></p>
+            <p> Tip Per Person: <span id = "tip-person-amount">£0</span></p>
+        </div>
+    </div>
+    
+</body>
+</html>

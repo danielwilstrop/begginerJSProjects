@@ -1,0 +1,13 @@
+body {
+    background-color: rgb(22, 21, 21);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+#clock {
+    font-size: 10rem;
+    margin-top: 15%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(111, 189, 241);
+}
